@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <title data-i18n="title">Prime Asset Global | Investment Real Estate at Wholesale Prices</title>
+  <title>Prime Asset Global | Investment Real Estate at Wholesale Prices</title>
   <meta name="description" content="Investments in real estate in Phuket, Bali, Dubai, Ras Al Khaimah and globally directly from developers. Wholesale prices, discounts, furniture packages and 0% installment.">
   <!-- Open Graph для шаринга -->
   <meta property="og:title" content="Prime Asset Global — Premium Real Estate at Wholesale Prices">
@@ -166,7 +166,7 @@
     .feature-icon { font-size: 40px; margin-bottom: 15px; }
     .lang-switch { display: flex; gap: 10px; }
     .lang-btn { background: none; border: none; color: #fff; cursor: pointer; font-size: 14px; text-transform: uppercase; }
-    .lang-btn.active { text-decoration: underline; }
+    .lang-btn.active { text-decoration: underline; cursor: default; }
     @media (max-width: 768px) {
       .hero { padding: 70px 20px 60px; }
       .lead-form { padding: 30px 20px; }
@@ -175,16 +175,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+  <link rel="alternate" hreflang="ru" href="https://prime-asset-global.com/ru/">
+</head>
 <body>
   <!-- Header -->
   <header class="header">
     <div class="container header-inner">
       <div class="logo">PRIME ASSET <span>GLOBAL</span></div>
-      <a href="#investment-form" class="cta-btn" data-i18n="cta_header">Get Access</a>
+      <a href="#investment-form" class="cta-btn">Get Access</a>
       <div class="lang-switch">
-        <button class="lang-btn active" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="ru">RU</button>
+        <span class="lang-btn active">EN</span>
+        <a href="/ru/" class="lang-btn">RU</a>
       </div>
     </div>
   </header>
@@ -192,151 +193,145 @@
     <!-- Hero -->
     <section class="hero">
       <div class="container">
-        <h1 data-i18n="hero_h1">Premium-class real estate at <span class="highlight">wholesale prices</span> from developers</h1>
-        <p class="hero-subtitle" data-i18n="hero_subtitle">
+        <h1>Premium-class real estate at <span class="highlight">wholesale prices</span> from developers</h1>
+        <p class="hero-subtitle">
           Prime Assets, Global Horizons – Invest Wisely.<br>
           Phuket • Bali • Dubai • Ras Al Khaimah • Global.<br>
           Exclusive conditions not available on the open market. Limited offers!
         </p>
       </div>
     </section>
-    <!-- Форма (3 поля) -->
+    <!-- Form -->
     <section class="form-section">
       <div class="container">
-        <form id="investment-form"
-              action="https://formsubmit.co/vash_email@gmail.com"
-              method="POST">
-          <!-- Скрытые поля для FormSubmit -->
-          <input type="hidden" name="_next" value="https://prime-asset-global.com/register?ref=ВАШ_КОД">
-          <input type="hidden" name="_subject" data-i18n-value="form_subject" value="New Application: Investor (Prime Asset Global)">
+        <form id="investment-form" action="https://formsubmit.co/vash_email@gmail.com" method="POST">
+          <input type="hidden" name="_next" value="https://prime-asset-global.com/thanks.html">
+          <input type="hidden" name="_subject" value="New Application: Investor (Prime Asset Global)">
           <input type="hidden" name="_captcha" value="false">
           <input type="text" name="_honey" style="display:none">
           <div class="lead-form">
             <div class="form-group">
-              <label class="form-label" data-i18n="form_name_label">Your Name</label>
-              <input type="text" name="name" class="form-control" required placeholder="John Doe" data-i18n-placeholder="form_name_placeholder">
+              <label class="form-label">Your Name</label>
+              <input type="text" name="name" class="form-control" required placeholder="John Doe">
             </div>
             <div class="form-group">
-              <label class="form-label" data-i18n="form_email_label">Email</label>
-              <input type="email" name="email" class="form-control" required placeholder="mail@example.com" data-i18n-placeholder="form_email_placeholder">
+              <label class="form-label">Email</label>
+              <input type="email" name="email" class="form-control" required placeholder="mail@example.com">
             </div>
             <div class="form-group">
-              <label class="form-label" data-i18n="form_phone_label">Phone (WhatsApp/Telegram)</label>
-              <input type="tel" name="phone" class="form-control" required placeholder="+1 999 000-0000" data-i18n-placeholder="form_phone_placeholder">
+              <label class="form-label">Phone (WhatsApp/Telegram)</label>
+              <input type="tel" name="phone" class="form-control" required placeholder="+1 999 000-0000">
             </div>
-            <button type="submit" class="cta-btn" style="width:100%; padding:18px; font-size:18px;" data-i18n="form_button">
+            <button type="submit" class="cta-btn" style="width:100%; padding:18px; font-size:18px;">
               Unlock Access to Prices (Limited!)
             </button>
-            <p style="margin-top:15px; font-size:12px; text-align:center; color:#94a3b8;" data-i18n="form_agreement">
+            <p style="margin-top:15px; font-size:12px; text-align:center; color:#94a3b8;">
               By clicking the button, you agree to receive the newsletter.
             </p>
           </div>
         </form>
       </div>
     </section>
-    <!-- Success-блок -->
+    <!-- Success block (hidden, for JS simulation if needed) -->
     <div class="success-message container" id="success-message">
       <div class="success-icon">✅</div>
-      <h2 style="font-size:32px; margin-bottom:20px;" data-i18n="success_h2">Thank you! Application Accepted</h2>
-      <p style="font-size:18px; color:var(--text-gray); margin-bottom:30px;" data-i18n="success_p">
+      <h2 style="font-size:32px; margin-bottom:20px;">Thank you! Application Accepted</h2>
+      <p style="font-size:18px; color:var(--text-gray); margin-bottom:30px;">
         <strong>Materials are on their way to your email.</strong><br>
-        You have also been redirected to registration in Prime Asset Global.
+        You have also been redirected to registration in ONLYBROKERS.
       </p>
-      <!-- Скачиваемые материалы -->
       <div class="download-grid">
         <div class="download-card">
-          <div class="download-title" data-i18n="download_title1">PDF Guide “5 Mistakes of Investors Abroad”</div>
-          <p class="download-desc" data-i18n="download_desc1">The most common pitfalls and how to avoid them</p>
+          <div class="download-title">PDF Guide “5 Mistakes of Investors Abroad”</div>
+          <p class="download-desc">The most common pitfalls and how to avoid them</p>
         </div>
         <div class="download-card">
-          <div class="download-title" data-i18n="download_title2">Case: +45% in 2 Years on a Villa in Phuket</div>
-          <p class="download-desc" data-i18n="download_desc2">Real example of profitability</p>
+          <div class="download-title">Case: +45% in 2 Years on a Villa in Phuket</div>
+          <p class="download-desc">Real example of profitability</p>
         </div>
         <div class="download-card">
-          <div class="download-title" data-i18n="download_title3">Legal Due Diligence Checklist for Properties</div>
-          <p class="download-desc" data-i18n="download_desc3">What to check before buying</p>
+          <div class="download-title">Legal Due Diligence Checklist for Properties</div>
+          <p class="download-desc">What to check before buying</p>
         </div>
       </div>
-      <!-- Расписание прогрева -->
       <div class="sequence-list">
-        <h3 style="text-align:center; margin-bottom:20px; color:var(--dark);" data-i18n="sequence_h3">What Will Come to Your Email:</h3>
+        <h3 style="text-align:center; margin-bottom:20px; color:var(--dark);">What Will Come to Your Email:</h3>
         <div class="sequence-item">
-          <div class="sequence-day" data-i18n="sequence_day_immediate">Immediately</div>
-          <div data-i18n="sequence_immediate">PDF Guide “5 Mistakes of Investors Abroad”</div>
+          <div class="sequence-day">Immediately</div>
+          <div>PDF Guide “5 Mistakes of Investors Abroad”</div>
         </div>
         <div class="sequence-item">
-          <div class="sequence-day" data-i18n="sequence_day1">Day 1</div>
-          <div data-i18n="sequence_day1_text">Market Comparison: Phuket vs Bali vs Dubai</div>
+          <div class="sequence-day">Day 1</div>
+          <div>Market Comparison: Phuket vs Bali vs Dubai</div>
         </div>
         <div class="sequence-item">
-          <div class="sequence-day" data-i18n="sequence_day3">Day 3</div>
-          <div data-i18n="sequence_day3_text">Case: +45% in 2 Years on a Villa in Phuket</div>
+          <div class="sequence-day">Day 3</div>
+          <div>Case: +45% in 2 Years on a Villa in Phuket</div>
         </div>
         <div class="sequence-item">
-          <div class="sequence-day" data-i18n="sequence_day5">Day 5</div>
-          <div data-i18n="sequence_day5_text">Legal Due Diligence Checklist for Properties</div>
+          <div class="sequence-day">Day 5</div>
+          <div>Legal Due Diligence Checklist for Properties</div>
         </div>
         <div class="sequence-item">
-          <div class="sequence-day" data-i18n="sequence_day7">Day 7</div>
-          <div data-i18n="sequence_day7_text">Exclusive: New Properties with Pre-Launch Prices</div>
+          <div class="sequence-day">Day 7</div>
+          <div>Exclusive: New Properties with Pre-Launch Prices</div>
         </div>
       </div>
-      <!-- Ссылка на регистрацию -->
       <div class="registration-link">
-        <h3 data-i18n="registration_h3">Next Step — Registration in Prime Asset Global</h3>
-        <p data-i18n="registration_p">After registration, a personal real estate consultant will contact you</p>
-        <a href="https://prime-asset-global.com/register?ref=ВАШ_КОД" class="cta-btn" data-i18n="registration_button">
+        <h3>Next Step — Registration in ONLYBROKERS</h3>
+        <p>After registration, a personal real estate consultant will contact you</p>
+        <a href="https://onlybrokers.com/register?ref=ВАШ_КОД" class="cta-btn">
           Register Now
         </a>
       </div>
     </div>
-    <!-- Преимущества -->
+    <!-- Features -->
     <section class="container">
       <div class="features-grid">
         <div class="feature-card">
           <div class="feature-icon">💎</div>
-          <h3 data-i18n="features_title1">Wholesale Prices</h3>
-          <p data-i18n="features_p1">We purchase pools of apartments directly — discounts up to 15–20% from the market.</p>
-          <p style="font-size:12px; color:var(--text-gray);" data-i18n="features_quote1">“Excellent conditions!” — Client from Moscow</p>
+          <h3>Wholesale Prices</h3>
+          <p>We purchase pools of apartments directly — discounts up to 15–20% from the market.</p>
+          <p style="font-size:12px; color:var(--text-gray);">“Excellent conditions!” — Client from Moscow</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🛡️</div>
-          <h3 data-i18n="features_title2">Verified Properties</h3>
-          <p data-i18n="features_p2">Strict Due Diligence. Only reliable developers.</p>
-          <p style="font-size:12px; color:var(--text-gray);" data-i18n="features_quote2">“Safe and reliable.” — Investor from Brussels</p>
+          <h3>Verified Properties</h3>
+          <p>Strict Due Diligence. Only reliable developers.</p>
+          <p style="font-size:12px; color:var(--text-gray);">“Safe and reliable.” — Investor from Brussels</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🎁</div>
-          <h3 data-i18n="features_title3">Bonuses and Furniture</h3>
-          <p data-i18n="features_p3">Furniture as a gift, 0% installment, exclusive packages.</p>
-          <p style="font-size:12px; color:var(--text-gray);" data-i18n="features_quote3">“Super bonuses!” — Client from St. Petersburg</p>
+          <h3>Bonuses and Furniture</h3>
+          <p>Furniture as a gift, 0% installment, exclusive packages.</p>
+          <p style="font-size:12px; color:var(--text-gray);">“Super bonuses!” — Client from St. Petersburg</p>
         </div>
       </div>
     </section>
-    <!-- География инвестиций -->
+    <!-- Geography -->
     <section style="background:var(--dark); color:white; padding:80px 20px; text-align:center;">
       <div class="container">
-        <h2 style="font-size:32px; margin-bottom:40px;" data-i18n="geography_h2">Investment Geography</h2>
+        <h2 style="font-size:32px; margin-bottom:40px;">Investment Geography</h2>
         <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:20px;">
           <div style="position:relative; height:250px; border-radius:8px; overflow:hidden;">
-            <img loading="lazy" src="images/Phuket.jpg?auto=format&fit=crop&w=600&q=80" alt="Phuket" data-i18n-alt="geography_phuket" style="width:100%;height:100%;object-fit:cover;">
-            <div style="position:absolute; bottom:0; left:0; width:100%; padding:20px; background:linear-gradient(transparent,rgba(0,0,0,0.8)); font-weight:700;" data-i18n="geography_phuket">Phuket</div>
+            <img loading="lazy" src="images/Phuket.jpg?auto=format&fit=crop&w=600&q=80" alt="Phuket" style="width:100%;height:100%;object-fit:cover;">
+            <div style="position:absolute; bottom:0; left:0; width:100%; padding:20px; background:linear-gradient(transparent,rgba(0,0,0,0.8)); font-weight:700;">Phuket</div>
           </div>
           <div style="position:relative; height:250px; border-radius:8px; overflow:hidden;">
-            <img loading="lazy" src="images/Bali.jpg?auto=format&fit=crop&w=600&q=80" alt="Bali" data-i18n-alt="geography_bali" style="width:100%;height:100%;object-fit:cover;">
-            <div style="position:absolute; bottom:0; left:0; width:100%; padding:20px; background:linear-gradient(transparent,rgba(0,0,0,0.8)); font-weight:700;" data-i18n="geography_bali">Bali</div>
+            <img loading="lazy" src="images/Bali.jpg?auto=format&fit=crop&w=600&q=80" alt="Bali" style="width:100%;height:100%;object-fit:cover;">
+            <div style="position:absolute; bottom:0; left:0; width:100%; padding:20px; background:linear-gradient(transparent,rgba(0,0,0,0.8)); font-weight:700;">Bali</div>
           </div>
           <div style="position:relative; height:250px; border-radius:8px; overflow:hidden;">
-            <img loading="lazy" src="images/Dubai.jpg?auto=format&fit=crop&w=600&q=80" alt="Dubai" data-i18n-alt="geography_dubai" style="width:100%;height:100%;object-fit:cover;">
-            <div style="position:absolute; bottom:0; left:0; width:100%; padding:20px; background:linear-gradient(transparent,rgba(0,0,0,0.8)); font-weight:700;" data-i18n="geography_dubai">Dubai</div>
+            <img loading="lazy" src="images/Dubai.jpg?auto=format&fit=crop&w=600&q=80" alt="Dubai" style="width:100%;height:100%;object-fit:cover;">
+            <div style="position:absolute; bottom:0; left:0; width:100%; padding:20px; background:linear-gradient(transparent,rgba(0,0,0,0.8)); font-weight:700;">Dubai</div>
           </div>
           <div style="position:relative; height:250px; border-radius:8px; overflow:hidden;">
-            <img loading="lazy" src="images/Ras_Al_Khaimah.jpg?auto=format&fit=crop&w=600&q=80" alt="Ras Al Khaimah" data-i18n-alt="geography_rak" style="width:100%;height:100%;object-fit:cover;">
-            <div style="position:absolute; bottom:0; left:0; width:100%; padding:20px; background:linear-gradient(transparent,rgba(0,0,0,0.8)); font-weight:700;" data-i18n="geography_rak">Ras Al Khaimah</div>
+            <img loading="lazy" src="images/Ras_Al_Khaimah.jpg?auto=format&fit=crop&w=600&q=80" alt="Ras Al Khaimah" style="width:100%;height:100%;object-fit:cover;">
+            <div style="position:absolute; bottom:0; left:0; width:100%; padding:20px; background:linear-gradient(transparent,rgba(0,0,0,0.8)); font-weight:700;">Ras Al Khaimah</div>
           </div>
           <div style="position:relative; height:250px; border-radius:8px; overflow:hidden;">
-            <img loading="lazy" src="images/Global.jpg?auto=format&fit=crop&w=600&q=80" alt="Global" data-i18n-alt="geography_global" style="width:100%;height:100%;object-fit:cover;">
-            <div style="position:absolute; bottom:0; left:0; width:100%; padding:20px; background:linear-gradient(transparent,rgba(0,0,0,0.8)); font-weight:700;" data-i18n="geography_global">Global</div>
+            <img loading="lazy" src="images/Global.jpg?auto=format&fit=crop&w=600&q=80" alt="Global" style="width:100%;height:100%;object-fit:cover;">
+            <div style="position:absolute; bottom:0; left:0; width:100%; padding:20px; background:linear-gradient(transparent,rgba(0,0,0,0.8)); font-weight:700;">Global</div>
           </div>
         </div>
       </div>
@@ -345,195 +340,19 @@
   <footer style="background:#0a0f1c; color:white; padding:40px 20px; text-align:center;">
     <div class="container">
       <div class="logo" style="margin-bottom:20px;">PRIME ASSET <span>GLOBAL</span></div>
-      <p style="font-size:13px; opacity:0.5;" data-i18n="footer_p">
+      <p style="font-size:13px; opacity:0.5;">
         © 2026 Prime Asset Global. All rights reserved.<br>
         Real estate investment platform. Not a public offer.
       </p>
     </div>
   </footer>
   <script>
-    const translations = {
-      en: {
-        title: 'Prime Asset Global | Investment Real Estate at Wholesale Prices',
-        description: 'Investments in real estate in Phuket, Bali, Dubai, Ras Al Khaimah and globally directly from developers. Wholesale prices, discounts, furniture packages and 0% installment.',
-        og_title: 'Prime Asset Global — Premium Real Estate at Wholesale Prices',
-        og_description: 'Exclusive conditions from developers: Phuket, Bali, Dubai, Ras Al Khaimah, Global. Get a guide and selection of properties.',
-        cta_header: 'Get Access',
-        hero_h1: 'Premium-class real estate at <span class="highlight">wholesale prices</span> from developers',
-        hero_subtitle: 'Prime Assets, Global Horizons – Invest Wisely.<br>Phuket • Bali • Dubai • Ras Al Khaimah • Global.<br>Exclusive conditions not available on the open market. Limited offers!',
-        form_name_label: 'Your Name',
-        form_name_placeholder: 'John Doe',
-        form_email_label: 'Email',
-        form_email_placeholder: 'mail@example.com',
-        form_phone_label: 'Phone (WhatsApp/Telegram)',
-        form_phone_placeholder: '+1 999 000-0000',
-        form_button: 'Unlock Access to Prices (Limited!)',
-        form_agreement: 'By clicking the button, you agree to receive the newsletter.',
-        success_h2: 'Thank you! Application Accepted',
-        success_p: '<strong>Materials are on their way to your email.</strong><br>You have also been redirected to registration in Prime Asset Global.',
-        download_title1: 'PDF Guide “5 Mistakes of Investors Abroad”',
-        download_desc1: 'The most common pitfalls and how to avoid them',
-        download_title2: 'Case: +45% in 2 Years on a Villa in Phuket',
-        download_desc2: 'Real example of profitability',
-        download_title3: 'Legal Due Diligence Checklist for Properties',
-        download_desc3: 'What to check before buying',
-        sequence_h3: 'What Will Come to Your Email:',
-        sequence_day_immediate: 'Immediately',
-        sequence_immediate: 'PDF Guide “5 Mistakes of Investors Abroad”',
-        sequence_day1: 'Day 1',
-        sequence_day1_text: 'Market Comparison: Phuket vs Bali vs Dubai',
-        sequence_day3: 'Day 3',
-        sequence_day3_text: 'Case: +45% in 2 Years on a Villa in Phuket',
-        sequence_day5: 'Day 5',
-        sequence_day5_text: 'Legal Due Diligence Checklist for Properties',
-        sequence_day7: 'Day 7',
-        sequence_day7_text: 'Exclusive: New Properties with Pre-Launch Prices',
-        registration_h3: 'Next Step — Registration in Prime Asset Global',
-        registration_p: 'After registration, a personal real estate consultant will contact you',
-        registration_button: 'Register Now',
-        features_title1: 'Wholesale Prices',
-        features_p1: 'We purchase pools of apartments directly — discounts up to 15–20% from the market.',
-        features_quote1: '“Excellent conditions!” — Client from Moscow',
-        features_title2: 'Verified Properties',
-        features_p2: 'Strict Due Diligence. Only reliable developers.',
-        features_quote2: '“Safe and reliable.” — Investor from Brussels',
-        features_title3: 'Bonuses and Furniture',
-        features_p3: 'Furniture as a gift, 0% installment, exclusive packages.',
-        features_quote3: '“Super bonuses!” — Client from St. Petersburg',
-        geography_h2: 'Investment Geography',
-        geography_phuket: 'Phuket',
-        geography_bali: 'Bali',
-        geography_dubai: 'Dubai',
-        geography_rak: 'Ras Al Khaimah',
-        geography_global: 'Global',
-        footer_p: '© 2026 Prime Asset Global. All rights reserved.<br>Real estate investment platform. Not a public offer.',
-        processing: 'Processing...',
-        form_subject: 'New Application: Investor (Prime Asset Global)',
-      },
-      ru: {
-        title: 'Prime Asset Global | Инвестиционная недвижимость по оптовым ценам',
-        description: 'Инвестиции в недвижимость Пхукета, Бали, Дубая, Рас-эль-Хаймы и глобально напрямую от застройщиков. Оптовые цены, скидки, мебельные пакеты и рассрочка 0%.',
-        og_title: 'Prime Asset Global — Премиум недвижимость по оптовым ценам',
-        og_description: 'Эксклюзивные условия от застройщиков: Пхукет, Бали, Дубай, Рас-эль-Хайма, Global. Получите гид и подборку объектов.',
-        cta_header: 'Получить доступ',
-        hero_h1: 'Недвижимость премиум-класса по <span class="highlight">оптовым ценам</span> от застройщиков',
-        hero_subtitle: 'Prime Assets, Global Horizons – Invest Wisely.<br>Пхукет • Бали • Дубай • Рас-эль-Хайма • Global.<br>Эксклюзивные условия, недоступные на открытом рынке. Лимитированные предложения!',
-        form_name_label: 'Ваше имя',
-        form_name_placeholder: 'Иван Иванов',
-        form_email_label: 'Email',
-        form_email_placeholder: 'mail@example.com',
-        form_phone_label: 'Телефон (WhatsApp/Telegram)',
-        form_phone_placeholder: '+7 999 000-00-00',
-        form_button: 'Открыть доступ к ценам (ограничено!)',
-        form_agreement: 'Нажимая кнопку, вы соглашаетесь на получение рассылки.',
-        success_h2: 'Спасибо! Заявка принята',
-        success_p: '<strong>Материалы уже в пути на ваш email.</strong><br>Вы также перенаправлены на регистрацию в Prime Asset Global.',
-        download_title1: 'PDF-гид «5 ошибок инвесторов за рубежом»',
-        download_desc1: 'Самые частые ловушки и как их избежать',
-        download_title2: 'Кейс: +45% за 2 года на вилле в Пхукете',
-        download_desc2: 'Реальный пример доходности',
-        download_title3: 'Чек-лист юридической проверки объекта',
-        download_desc3: 'Что проверять перед покупкой',
-        sequence_h3: 'Что придёт вам на email:',
-        sequence_day_immediate: 'Сразу',
-        sequence_immediate: 'PDF-гид «5 ошибок инвесторов за рубежом»',
-        sequence_day1: '1 день',
-        sequence_day1_text: 'Сравнение рынков: Пхукет vs Бали vs Дубай',
-        sequence_day3: '3 дня',
-        sequence_day3_text: 'Кейс: +45% за 2 года на вилле в Пхукете',
-        sequence_day5: '5 дней',
-        sequence_day5_text: 'Чек-лист юридической проверки объекта',
-        sequence_day7: '7 дней',
-        sequence_day7_text: 'Эксклюзив: новые объекты с pre-launch ценами',
-        registration_h3: 'Следующий шаг — регистрация в Prime Asset Global',
-        registration_p: 'После регистрации с вами свяжется личный консультант по недвижимости',
-        registration_button: 'Зарегистрироваться сейчас',
-        features_title1: 'Оптовые цены',
-        features_p1: 'Закупаем пулы квартир напрямую — скидки до 15–20% от рынка.',
-        features_quote1: '«Отличные условия!» — Клиент из Москвы',
-        features_title2: 'Проверенные объекты',
-        features_p2: 'Строгий Due Diligence. Только надёжные застройщики.',
-        features_quote2: '«Безопасно и надежно.» — Инвестор из Брюсселя',
-        features_title3: 'Бонусы и мебель',
-        features_p3: 'Мебель в подарок, рассрочка 0%, эксклюзивные пакеты.',
-        features_quote3: '«Супер бонусы!» — Клиент из СПб',
-        geography_h2: 'География инвестиций',
-        geography_phuket: 'Пхукет',
-        geography_bali: 'Бали',
-        geography_dubai: 'Дубай',
-        geography_rak: 'Рас-эль-Хайма',
-        geography_global: 'Global',
-        footer_p: '© 2026 Prime Asset Global. Все права защищены.<br>Инвестиционная платформа недвижимости. Не является публичной офертой.',
-        processing: 'Обработка...',
-        form_subject: 'Новая заявка: Инвестор (Prime Asset Global)',
-      }
-    };
-
-    function setLanguage(lang) {
-      localStorage.setItem('lang', lang);
-      document.documentElement.lang = lang;
-      document.title = translations[lang].title;
-      document.querySelector('meta[name="description"]').setAttribute('content', translations[lang].description);
-      document.querySelector('meta[property="og:title"]').setAttribute('content', translations[lang].og_title);
-      document.querySelector('meta[property="og:description"]').setAttribute('content', translations[lang].og_description);
-
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (translations[lang][key]) {
-          if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-            el.value = translations[lang][key];
-          } else {
-            el.innerHTML = translations[lang][key];
-          }
-        }
-      });
-
-      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-        const key = el.getAttribute('data-i18n-placeholder');
-        if (translations[lang][key]) {
-          el.placeholder = translations[lang][key];
-        }
-      });
-
-      document.querySelectorAll('[data-i18n-alt]').forEach(el => {
-        const key = el.getAttribute('data-i18n-alt');
-        if (translations[lang][key]) {
-          el.alt = translations[lang][key];
-        }
-      });
-
-      document.querySelectorAll('[data-i18n-value]').forEach(el => {
-        const key = el.getAttribute('data-i18n-value');
-        if (translations[lang][key]) {
-          el.value = translations[lang][key];
-        }
-      });
-
-      document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.getAttribute('data-lang') === lang) {
-          btn.classList.add('active');
-        }
-      });
-    }
-
-    const savedLang = localStorage.getItem('lang') || 'en';
-    setLanguage(savedLang);
-
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const lang = btn.getAttribute('data-lang');
-        setLanguage(lang);
-      });
-    });
-
     const form = document.getElementById('investment-form');
     const successBlock = document.getElementById('success-message');
     form.addEventListener('submit', function(e) {
-      const currentLang = localStorage.getItem('lang') || 'en';
       const btn = this.querySelector('button');
       btn.disabled = true;
-      btn.innerText = translations[currentLang].processing;
+      btn.innerText = 'Processing...';
       btn.style.opacity = '0.7';
       setTimeout(() => {
         successBlock.style.display = 'block';

@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Запрещаем индексацию служебных и тестовых путей
+Disallow: /admin/
+Disallow: /test/
+Disallow: /draft/
+Disallow: /_*
+Disallow: /*.php$
+Disallow: /*?
+
+# Запрещаем параметры трекинга (UTM, fbclid, gclid и т.д.)
+Disallow: /*utm_*
+Disallow: /*fbclid=*
+Disallow: /*gclid=*
+Disallow: /*ref=*
+Disallow: /*source=*
+
+# Разрешаем главные страницы и языковые версии
+Allow: /
+Allow: /ru/
+Allow: /thanks.html
+Allow: /ru/thanks.html
+
+# Sitemap
+Sitemap: https://prime-asset-global.com/sitemap.xml

@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Запрещаем параметры и служебные пути
+Disallow: /*?
+Disallow: /*utm_*
+Disallow: /*fbclid=*
+Disallow: /*gclid=*
+Disallow: /*ref=*
+Disallow: /admin/
+Disallow: /test/
+Disallow: /draft/
+Disallow: /_*
+
+# Разрешаем главную страницу RU и важные подстраницы
+Allow: /ru/
+Allow: /ru/thanks.html
+
+# Разрешаем основную EN-версию (если нужно кросс-индексация)
+Allow: /
+
+# Sitemap (для всего домена)
+Sitemap: https://prime-asset-global.com/sitemap.xml

@@ -1,0 +1,50 @@
+# _config.yml для Cloudflare Pages
+
+title: Prime Asset Global — Premium Real Estate Investments
+description: Exclusive real estate investments in Phuket, Bali, Dubai, Ras Al Khaimah & globally. Wholesale prices, bonuses, direct from developers.
+baseurl: ""                    # Оставляем пустым для корневого домена
+url: "https://prime-asset-global.com"
+
+# Языки и alternate links
+lang: en
+languages:
+  - code: en
+    name: English
+    iso: en
+  - code: ru
+    name: Русский
+    iso: ru
+
+# Даты и время
+timezone: Europe/Brussels
+
+# Плагины (Cloudflare Pages поддерживает базовые)
+plugins:
+  - jekyll-sitemap          # Автоматически генерирует sitemap.xml
+  - jekyll-seo-tag          # Добавляет meta-теги автоматически (если используешь Jekyll)
+
+# Настройки sitemap
+sitemap:
+  changefreq: weekly
+  priority: 1.0
+  filename: sitemap.xml
+
+# Исключить ненужное из сборки
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .gitignore
+  - README.md
+
+# Чистые URL без .html
+permalink: /:path/
+
+# Дефолтные значения
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: default
